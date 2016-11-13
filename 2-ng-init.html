@@ -1,0 +1,29 @@
+<html ng-app>
+<head>
+	<title>Invo Art</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<style>
+		.product {
+			width : 100px;
+			height: 100px;
+			border-style: solid;
+			border-color: red;
+   			border-width: 5px;
+   			padding: 25px;
+   			margin : 20px;
+   			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div ng-init="products = [{desc   : '1',rating : 5},{desc   : '2',rating : 5},{desc   : '3',rating : 5}]">
+	</div>
+	<h1>Products :</h1>
+	<div ng-repeat="product in products">
+		 <div class="product">
+			 Description : {{product.desc}} <br/>
+			 Rating      : {{product.rating}}
+		 </div>
+	 </div>
+</body>
+</html>

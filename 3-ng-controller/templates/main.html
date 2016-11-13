@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<input type="text" class="form-control search" ng-model="productName" placeholder="Enter the product to be searched!">
+		</div>
+	</div>
+	<div class="space-30"></div>
+	<div class="row">
+		<div ng-repeat="product in products | filter:productName">
+		 <div class="col-md-4 product" ng-click="onClickProduct('/detail',product)">
+			 <h2 class="productTitle">{{product.title}}</h2>
+			 <img class="productImg" ng-src="{{product.imageUrl}}"/>
+			 <p class="productDesc">{{product.description}}</p>
+		 </div>
+	 </div>
+	</div>
+</div>
